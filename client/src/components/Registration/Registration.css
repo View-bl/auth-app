@@ -1,0 +1,148 @@
+.registration-screen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 16px 16px 64px;
+  box-sizing: border-box;
+}
+
+.registration__logo {
+  margin-bottom: 136px;
+  max-width: 100%;
+  height: auto;
+}
+
+.registration__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  line-height: 133%;
+  color: #000;
+}
+
+.registration {
+  width: 100%;
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration__input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  font-weight: 400;
+  line-height: 157%;
+  color: rgb(0 0 0);
+  font-size: 14px;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.registration__input.name-input {
+  margin-bottom: 16px;
+}
+
+.registration__input.email-input {
+  margin-bottom: 16px;
+}
+
+.registration__password {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.registration__toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.registration__checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 400;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  margin-bottom: 224px;
+  height: 44px;
+  line-height: 157%;
+}
+
+.registration__checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.registration__checkbox-label a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  text-decoration-skip-ink: none;
+}
+
+.registration__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 0;
+  background: #1677ff;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  transition: background 0.2s;
+  height: 40px;
+}
+
+.registration__button:hover {
+  background: #222;
+}
+
+.registration__button-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .registration-screen {
+    padding: 32px;
+  }
+
+  .registration__logo {
+    margin-bottom: 64px;
+  }
+
+  .registration__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .registration {
+    max-width: 400px;
+  }
+
+  .registration__input {
+    padding: 14px 44px 14px 14px;
+    font-size: 16px;
+  }
+
+  .registration__button {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+}

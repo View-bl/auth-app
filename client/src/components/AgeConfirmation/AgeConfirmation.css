@@ -1,0 +1,136 @@
+.age-confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 16px 16px 32px 16px;
+  box-sizing: border-box;
+}
+
+.age-confirmation__logo {
+  display: block;
+  margin: 0 auto 271px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.age-confirmation__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px; 
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 121%;
+  text-align: center;
+  color: #000;
+}
+
+.age-confirmation__plus {
+  margin-left: 11px;
+  margin-top: -6px;
+}
+
+.age-confirmation__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 215px;
+
+}
+
+.age-confirmation__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.age-confirmation__button {
+  border-radius: 8px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.age-confirmation__button:hover {
+  background-color: #f0f0f0;
+}
+
+.age-confirmation__button:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.age-confirmation__button--confirm {
+  background-color: #1677ff;
+  color: #fff;
+  font-size: 16px;
+}
+
+.age-confirmation__button--confirm:hover {
+  background-color: #105ecf;
+}
+
+.age-confirmation__button--leave {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 16px;
+}
+
+.age-confirmation__button--leave:hover {
+  background-color: #f0f0f0;
+}
+
+.age-confirmation__button--leave:active {
+  background-color: #e0e0e0;
+}
+
+@media (min-width: 768px) {
+  .age-confirmation {
+    height: 100%;
+    padding: 32px;
+  }
+
+  .age-confirmation__inner {
+    width: 660px;
+    height: 198px;
+  }
+
+  .age-confirmation__text {
+    margin-bottom: 32px;
+  }
+
+  .age-confirmation__buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .age-confirmation__logo {
+    position: fixed;
+    top: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    max-width: 120px;
+  }
+
+  .age-confirmation__button--confirm {
+    width: 186px;
+  }
+
+  .age-confirmation__button--leave {
+    width: 166px;
+  }
+
+  .age-confirmation__title {
+    margin-bottom: 32px;
+  }
+}
