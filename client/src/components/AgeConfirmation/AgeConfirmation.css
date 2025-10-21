@@ -1,3 +1,4 @@
+
 .age-confirmation {
   display: flex;
   flex-direction: column;
@@ -7,6 +8,8 @@
   width: 100%;
   padding: 16px 16px 32px 16px;
   box-sizing: border-box;
+  background-color: #fff;
+  
 }
 
 .age-confirmation__logo {
@@ -94,7 +97,7 @@
 @media (min-width: 768px) {
   .age-confirmation {
     height: 100%;
-    padding: 32px;
+    padding: 0;
   }
 
   .age-confirmation__inner {

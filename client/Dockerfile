@@ -10,11 +10,14 @@ COPY package*.json ./
 # Встановлюємо залежності
 RUN npm install
 
-# Встановлюємо змінну середовища для hot reload
-ENV CHOKIDAR_USEPOLLING=true
+# Копіюємо решту файлів (src, public і т.д.)
+COPY . .
 
 # Експортуємо порт CRA
 EXPOSE 3000
+
+# Hot reload для CRA у Docker
+ENV CHOKIDAR_USEPOLLING=true
 
 # Запуск dev-server
 CMD ["npm", "start"]

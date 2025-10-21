@@ -1,0 +1,11 @@
+.enter-code__inputsit {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding-right: 31px;
+  padding-left: 31px;
+}
+
+

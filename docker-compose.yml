@@ -6,13 +6,15 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./client:/app          # локальні файли в контейнер для live reload
-      - /app/node_modules      # щоб node_modules не перезаписувався
+      - ./client:/app                # синхронізація локальних файлів із контейнером
+      - /app/node_modules            # щоб node_modules не перезаписувався локально
     stdin_open: true
     tty: true
     environment:
-      - CHOKIDAR_USEPOLLING=true  # щоб dev-server відслідковував зміни у Docker
-    command: npm start       # запуск dev-server CRA
+      - CHOKIDAR_USEPOLLING=true     # для live reload у Docker
+    command: npm start
+    depends_on:
+      - server                       # client запуститься після server
 
   server:
     build: ./server
@@ -23,14 +25,18 @@ services:
       - /app/node_modules
     environment:
       - MONGO_URI=mongodb://mongo:27017/authdb
-    command: npm run dev     # запуск серверу у режимі nodemon або ts-node-dev
+      - NODE_ENV=development
+    command: npm run dev
+    depends_on:
+      - mongo                        # server запуститься після MongoDB
 
   mongo:
     image: mongo:6.0
+    # container_name прибрано, щоб уникнути конфліктів із вже існуючими контейнерами
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - mongo_data:/data/db          # збереження даних Mongo між перезапусками
 
 volumes:
   mongo_data:
